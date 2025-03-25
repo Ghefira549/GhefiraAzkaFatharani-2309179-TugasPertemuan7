@@ -1,0 +1,40 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package latihan7_ghefiraazka;
+
+/**
+ *
+ * @author FARIZ
+ */
+public class Stopwatch {
+    private long startTime;
+    private long endTime;
+    
+    public Stopwatch(){
+        this.startTime=System.currentTimeMillis();
+    }
+    
+    public void start(){
+        this.startTime=System.currentTimeMillis();
+    }
+    
+    public void stop(){
+        this.endTime=System.currentTimeMillis();
+    }
+    
+     public long getStartTime() {
+        return startTime;
+    }
+
+    
+    public long getEndTime() {
+        return endTime;
+    }
+
+    public long getElapsedTime(){
+        return endTime-startTime;
+    }
+    
+}
