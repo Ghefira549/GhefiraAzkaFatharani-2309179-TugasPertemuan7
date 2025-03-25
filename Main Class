@@ -1,0 +1,41 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package latihan7_ghefiraazka;
+
+/**
+ *
+ * @author FARIZ
+ */
+
+public class Latihan7_GhefiraAzka {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       int[] array = new int[100000]; //array dari 0-100000
+       Stopwatch StopWatch=new Stopwatch();
+       StopWatch.start(); //mengambil waktu saat ini
+       
+       for(int i=0; i<array.length-1;i++){ //insertion short
+           int indeksTerkecil=i;
+           for(int j=i+1;j<array.length;j++ ){
+               if(array[j]<array[indeksTerkecil]){
+                   indeksTerkecil=j;
+               }
+           }
+           int temp=array[indeksTerkecil];
+           array[indeksTerkecil]=array[i];
+           array[i]=temp;
+       }
+      
+       StopWatch.stop();
+        System.out.println("Lama Eksekusi Program:"+StopWatch.getElapsedTime());
+       
+       
+        
+    }
+    
+}
